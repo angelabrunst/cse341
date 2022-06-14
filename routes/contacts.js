@@ -1,34 +1,10 @@
-const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
+const express = require('express');
+const router = express.Router();
 
-const contactSchema = new Schema({
-    firstName: {
-        type: String,
-        require: true,
-        unique: false
-    },
-    lastName: {
-        type: String,
-        require: true,
-        unique: false
-    },
-    email: {
-        type: String,
-        require: true,
-        unique: false
-    },
-    favoriteColor: {
-        type: String,
-        require: true,
-        unique: false
-    },
-    birthday: {
-        type: String,
-        require: true,
-        unique: false
-    }
-})
+const contactsController = require('../controllers/contacts');
 
-const Contact = mongoose.model('contact', contactSchema);
+router.get('/', contactsController.getAll);
 
-module.exports = Contact;
+router.get('/:id', contactsController.getSingle);
+
+module.exports = router;
