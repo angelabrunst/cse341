@@ -27,8 +27,8 @@ Content-Type: application/json
     "firstName":"Amelia",
     "lastName":"Brunst",
     "email":"abrunst@gmail.com",
-    "favoriteColor":"pink",
-    "birthday":"03/29/2000"
+    "favoriteColor":"purple",
+    "birthday":"03/29/2016"
 }
 ###
 
