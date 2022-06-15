@@ -1,56 +1,47 @@
-// Local Host
+// Local Host Read All
 GET http://localhost:5500/contacts
 ###
+
+// Local Host Read One by Id
 GET http://localhost:5500/contacts/62a7fcc40cf4af5858c7ce64
 ###
-GET http://localhost:5500/contacts/62a80d8c0cf4af5858c7ce65
+
+// Add contact
+POST http://localhost:5500/contacts HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstName":"Amelia",
+    "lastName":"Brunst",
+    "email":"abrunst@gmail.com",
+    "favoriteColor":"pink",
+    "birthday":"03/29/2000"
+}
 ###
-GET http://localhost:5500/contacts/62a80dcf0cf4af5858c7ce66
+
+// Update contact
+PUT http://localhost:5500/contacts/ HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstName":"Amelia",
+    "lastName":"Brunst",
+    "email":"abrunst@gmail.com",
+    "favoriteColor":"purple",
+    "birthday":"03/29/2016"
+}
+###
+
+// Delete contact
+DELETE http://localhost:5500/contacts/ HTTP/1.1
 ###
 
 // Heroku
-GET http://cse341-personal2brunst.herokuapp.com/contacts
+GET http://abrunst2022.herokuapp.com/contacts
 ###
-GET http://cse341-personal2brunst.herokuapp.com/contacts/62a7fcc40cf4af5858c7ce64
+GET http://abrunst2022.herokuapp.com/contacts/62a7fcc40cf4af5858c7ce64
 ###
-GET http://cse341-personal2brunst.herokuapp.com/contacts/62a80d8c0cf4af5858c7ce65
+GET http://abrunst2022.herokuapp.com/contacts/62a80d8c0cf4af5858c7ce65
 ###
-GET http://cse341-personal2brunst.herokuapp.com/contacts/62a80dcf0cf4af5858c7ce66
+GET http://abrunst2022.herokuapp.com/contacts/62a80dcf0cf4af5858c7ce66
 ###
-
-// Post 
-POST http://localhost:5500/contacts
-Content-Type: application/json
-
-{
-    "firstName":"Spencer",
-    "lastName":"Hurd",
-    "email":"spencer.ninja@gmail.com",
-    "favoriteColor":"green",
-    "birthday":"08/14/1989"
-}
-
-###
-POST http://localhost:5500/contacts
-Content-Type: application/json
-
-{
-    "firstName":"Brooke",
-    "lastName":"Sanchez",
-    "email":"b.sanchez@gmail.com",
-    "favoriteColor":"yellow",
-    "birthday":"05/15/1991"
-}
-
-###
-POST http://localhost:5500/contacts
-Content-Type: application/json
-
-{
-    "firstName":"Richard",
-    "lastName":"Brunst",
-    "email":"rbrunst@gmail.com",
-    "favoriteColor":"blue",
-    "birthday":"08/12/1990"
-}
-
