@@ -13,5 +13,4 @@ router.put('/:id', contactsController.updateContact);
 
 router.delete('/:id', contactsController.deleteContact);
 
-// eslint-disable-next-line no-undef
 module.exports = router;

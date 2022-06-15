@@ -3,7 +3,6 @@ const bodyParser = require('body-parser');
 const mongodb = require('./db/connect');
 
 const app = express();
-// eslint-disable-next-line no-undef
 const port = process.env.PORT || 5500;
 
 app
@@ -14,8 +13,7 @@ app
     })
     .use('/', require('./routes'));
 
-// eslint-disable-next-line no-unused-vars
-mongodb.initDb((err, mongodb) => {
+mongodb.initDb((err) => {
     if (err) {
         console.log(err);
     } else {

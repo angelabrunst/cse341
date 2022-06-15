@@ -27,7 +27,6 @@ const getDb = () => {
     return _db;
 };
 
-// eslint-disable-next-line no-undef
 module.exports = {
     initDb,
     getDb,
