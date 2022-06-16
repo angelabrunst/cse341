@@ -3,13 +3,13 @@
     "version": "1.0.0",
     "description": "",
     "main": "app.js",
-
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "start": "nodemon app.js",
         "lint": "eslint .",
         "lint:fix": "eslint --fix",
-        "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
+        "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
+        "swagger": "node ./swagger.js"
     },
     "repository": {
         "type": "git",
@@ -28,13 +28,15 @@
         "mongodb": "^4.7.0",
         "mongodb-connection-string-url": "^2.5.2",
         "mongoose": "^6.3.6",
-        "npm": "^8.12.1"
+        "npm": "^8.12.1",
+        "swagger-ui-express": "^4.4.0"
     },
     "devDependencies": {
         "eslint": "^8.17.0",
         "eslint-config-prettier": "^8.5.0",
         "eslint-plugin-prettier": "^4.0.0",
         "nodemon": "^2.0.16",
-        "prettier": "^2.7.0"
+        "prettier": "^2.7.0",
+        "swagger-autogen": "^2.21.3"
     }
 }
